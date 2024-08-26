@@ -1,0 +1,11 @@
+# This is the base file for Coordination Application
+world config: ./ADF/world/world_stereo.yaml
+color config: ./ADF/color/colors.yaml
+input devices config: ./ADF/input_devices/input_devices.yaml
+
+multibody configs:
+  #3D MED PHANTOM
+  - "ADF/phantom.yaml" #0
+  #PSM LND 420006
+  - "ADF/psm1_420006.yaml" #1
+  - "ADF/psm2_420006.yaml" #2
