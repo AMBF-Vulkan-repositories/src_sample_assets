@@ -59,9 +59,9 @@ BODY base link:
       y: 0
   passive: false
   namespace: /ambf/env/psm2/
-  publish children names: false
-  publish joint names: false
-  publish joint positions: false
+  publish children names: true 
+  publish joint names: true 
+  publish joint positions: true
   friction:
     rolling: 0.0
     static: 0.5

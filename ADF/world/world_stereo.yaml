@@ -5,6 +5,12 @@ environment: "./checkered_floor.yaml"
 namespace: /ambf/env/
 max iterations: 50
 gravity: { x: 0.0, y: 0.0, z: -9.8 }
+plugins: [
+  {
+    name: "world_comm_plugin",
+    filename: "libworld_plugins_loader.so"
+  }
+]
 shaders:
   path: ../../ambf_shaders/
   vertex: "shader.vs"
@@ -101,12 +107,12 @@ cameraR:
   field view angle: *cam_common_fov 
   monitor: 2
   parent: BODY CameraFrame
-  publish image: True
+  publish image: False 
   publish image interval: 5
   publish image resolution: *cam_common_pub_img_res
   publish depth: True
   publish depth resolution: *cam_common_pub_depth_res
-  visible: True
+  visible: False 
   mouse control multipliers: { pan: 0.1, rotate: 1.0, scroll: 0.1, arcball: 0.1 }
   multipass: True
 
